@@ -16,6 +16,9 @@
 
 - At session start, read `.claude/memory/INDEX.md`.
 - After every completed task, before responding, check whether the task involved a technical decision, a bug fix, a reusable pattern, or a project convention. If yes, write it to memory before sending the response.
+- Write memory files to `.claude/memory/` only. Never write outside this folder.
+- Each memory entry is a separate file in `.claude/memory/`, named `YYYY-MM-DD-short-description.md`.
+- Update `INDEX.md` after every write.
 - Keep `INDEX.md` under 200 lines.
 
 # Skills (MANDATORY, applies when completing a task)
