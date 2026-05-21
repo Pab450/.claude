@@ -53,3 +53,25 @@ Sub-agents live in `.claude/agents/`. Manage them autonomously.
 - Always write tests for the code you write or change.
 - After writing or modifying any code, run the tests.
 - Do not say "done" until the tests pass.
+
+---
+
+# Rule transparency (MANDATORY, applies to EVERY response)
+
+Every time you apply any rule from this file (a single bullet OR a whole section), you MUST explicitly tell me, in the same response where the rule was applied. No exceptions, including the very first message of a session.
+
+Format, at the end of your response, under a `### Rules applied` heading:
+
+- **[Section > exact bullet text]** : one short sentence: what you were about to do, and why this rule shaped it.
+
+Rules:
+
+- One entry per rule actually used. Do not list rules you didn't use.
+- If zero rules were applied, write `### Rules applied` followed by `none`.
+- Loading memory at session start counts as applying the Memory rule, declare it.
+
+---
+
+# Debug aid (test phase, keep separate)
+
+If you catch yourself having skipped Rule transparency in a previous turn, acknowledge it and add the missing entries in the next response.
