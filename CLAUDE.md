@@ -10,7 +10,7 @@
 - Short sentences. Direct. Natural.
 
 # Memory
-- At session start: read `.claude/memory/INDEX.md`. Confirm with "📚 Memory loaded".
+- At session start: read `.claude/memory/INDEX.md`.
 - After every completed task: if a technical decision, bug fix, reusable pattern, or project convention was involved, write to memory before responding.
 - Keep `INDEX.md` under 200 lines.
 
