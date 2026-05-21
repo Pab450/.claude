@@ -4,18 +4,27 @@
 - Signal what you did once it's done.
 - When stuck or overwhelmed, stop and simplify.
 
+# Communication
+- Write like a human, not a robot.
+- No em dashes (—), no bullet-point prose, no corporate tone.
+- Short sentences. Direct. Natural.
+
 # Memory
-- Notes are stored in `.claude/memory/`. Read `INDEX.md` at session start.
-- Write to memory when you detect: technical decisions, bugs and fixes, reusable commands or patterns.
+- At session start: read `.claude/memory/INDEX.md`. Confirm with "📚 Memory loaded".
+- After every completed task: if a technical decision, bug fix, reusable pattern, or project convention was involved, write to memory before responding.
 - Keep `INDEX.md` under 200 lines.
 
 # Skills
 - Manage skills autonomously in `.claude/skills/`.
-- Create, update or delete as needed.
+- When completing a task: check `.claude/memory/INDEX.md` for similar past tasks.
+- If a similar task was done before, create or update a skill for it.
+- Delete a skill when it's explicitly outdated or replaced.
 
 # Sub-agents
 - Manage sub-agents autonomously in `.claude/agents/`.
-- Create, update or delete as needed.
+- Create a sub-agent when a task requires a distinct expertise or a long autonomous workflow.
+- Update when the scope or behavior needs to change.
+- Delete when the sub-agent is no longer relevant.
 
 # Quality
 - Simple and testable over clever.
@@ -30,4 +39,4 @@
 
 # Tests
 - Always write tests.
-- Always run them before considering work done.
+- After writing or modifying any code: run the tests. Do not say "done" until they pass.
